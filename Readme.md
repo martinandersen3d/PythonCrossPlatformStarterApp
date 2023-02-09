@@ -39,3 +39,11 @@ the following must be the same name/wording:
 Just follow the above and avoid any problems.
 
 If you change name, you must update the 6_appimagetool_build.sh
+
+# Notes on Windows and PyInstall - Exe start Slowness
+- When i use the `pyinstall --onefile`, it creates ONE exe file. But the exe starts slow, like 1-2 sek.
+- Solution: dont use the `--onefile` flag. It will create a directory with all needed files and one exe file - That starts Fast
+- the flag `--noconfirm` skips some steps and build faster
+to adjust what files is included in the Exe file, you can play with the `--exclude-module` here:
+
+4_pyinstall_build_windows_no_console.ps1
